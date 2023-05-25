@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  frontend-test:
+    container_name: cus-frontend-test
+    image: cus-frontend-test-img
+    build:
+      context: frontend-app
+      target: test
+    volumes:
+      - /app/node_modules

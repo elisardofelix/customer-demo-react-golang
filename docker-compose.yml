@@ -1,0 +1,47 @@
+version: "3.8"
+services:
+  db:
+    image: mysql:8.0
+    container_name: cus-db
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./docker-compose/mysql:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_DATABASE: cusdb
+      MYSQL_ROOT_PASSWORD: ttpass
+    networks:
+      - development
+  app:
+    build:
+      context: ./api
+      target: production
+      dockerfile: Dockerfile
+    image: cus-app-img
+    container_name: cus-app
+    restart: unless-stopped
+    ports:
+        - "9999:8080"
+    depends_on:
+      - db
+    networks:
+      - development
+  frontend:
+    container_name: cus-frontend
+    image: cus-frontend-img
+    restart: unless-stopped
+    build:
+      context: frontend-app
+      target: development
+    ports:
+      - "3000:3000"
+    volumes:
+      - /app/node_modules
+    networks:
+      - development
+    depends_on:
+      - app
+networks:
+  development:
+    driver: bridge

@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  app-test:
+    build:
+      context: ./api
+      target: test
+      dockerfile: Dockerfile
+    image: cus-app-test-img
+    container_name: cus-app-test
+    restart: unless-stopped
+    networks:
+      - development
+networks:
+  development:
+    driver: bridge

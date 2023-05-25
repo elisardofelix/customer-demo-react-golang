@@ -58,6 +58,7 @@ In case of Debian or Ubuntu:
 `sudo apt-get install make`
 
 In case of Arch linux:
+
 `sudo pacman -Sy make`
 
 ## How to run the application

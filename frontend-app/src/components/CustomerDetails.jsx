@@ -32,12 +32,12 @@ const CustomerDetails = ({ isLoading, setIsLoading }) => {
                   <TableRow>
                     <TableCell>ID</TableCell>
                     <TableCell align="center">First Name</TableCell>
+                    <TableCell align="center">Last Name</TableCell>
                     <TableCell align="center">Email</TableCell>
                     <TableCell align="center">Gender</TableCell>
                     <TableCell align="center">Company</TableCell>
                     <TableCell align="center">City</TableCell>
                     <TableCell align="center">Title</TableCell>
-                    <TableCell align="center">Last Name</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>

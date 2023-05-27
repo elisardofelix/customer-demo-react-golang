@@ -58,11 +58,12 @@ In case of Debian or Ubuntu:
 `sudo apt-get install make`
 
 In case of Arch linux:
+
 `sudo pacman -Sy make`
 
 ## How to run the application
 
-There are multiple commands available for running the multiple options:
+There are multiple commands available for running the multiple options when you are located in the root folder of the project:
 
 * `make local`: This will allow you to set up the local environment with all the required dependencies.
 

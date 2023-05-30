@@ -6,7 +6,7 @@ import (
 )
 
 func MySQLConnect() *gorm.DB {
-	dsn := "root:ttpass@tcp(host.docker.internal:3306)/cusdb"
+	dsn := "root:ttpass@tcp(db:3306)/cusdb"
 
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {

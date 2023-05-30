@@ -38,6 +38,8 @@ services:
       - "3000:3000"
     volumes:
       - /app/node_modules
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     networks:
       - development
     depends_on:

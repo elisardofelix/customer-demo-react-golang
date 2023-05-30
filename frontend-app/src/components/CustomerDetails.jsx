@@ -25,7 +25,7 @@ const CustomerDetails = ({ isLoading, setIsLoading }) => {
 
   return (
       !isLoading && <div>
-          <center><h3>Customer Details</h3></center>
+          <center><h3 style={{ color:"black" }}>Customer Details</h3></center>
             <TableContainer component={Paper}>
               <Table aria-label="customer details table">
                 <TableHead>

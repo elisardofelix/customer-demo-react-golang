@@ -30,7 +30,7 @@ function DataTable({ isLoading, setIsLoading }) {
 
   return (
       !isLoading && <div>
-        <center><h3>Customers List</h3></center>
+        <center><h3  style={{ color:"black" }}>Customers List</h3></center>
             <div style={{ height: 400, width: '100%' }}>
                 <DataGrid
                   rows={data}
